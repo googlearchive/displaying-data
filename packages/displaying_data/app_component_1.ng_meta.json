@@ -1,0 +1,82 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:angular2/core.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "AppComponent",
+        "4": [
+          {
+            "1": "Component",
+            "3": [
+              {
+                "1": "selector",
+                "2": "'my-app'"
+              },
+              {
+                "1": "template",
+                "2": "'''\n<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero}}</h2>'''"
+              }
+            ],
+            "4": false,
+            "5": true,
+            "6": true,
+            "7": true,
+            "8": false
+          }
+        ]
+      }
+    ],
+    "6": "app_component_1.dart",
+    "10": [
+      {
+        "1": "package:angular2/core.template.dart",
+        "4": "i0"
+      }
+    ]
+  },
+  "type": {
+    "AppComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "dynamicLoadable": true,
+      "selector": "my-app",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "AppComponent",
+        "moduleUrl": "asset:displaying_data/lib/app_component_1.dart",
+        "prefix": null,
+        "isHost": false,
+        "constConstructor": null,
+        "value": null,
+        "diDeps": []
+      },
+      "changeDetection": 5,
+      "inputs": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [],
+      "template": {
+        "encapsulation": 2,
+        "template": "<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero}}</h2>",
+        "templateUrl": "asset:displaying_data/lib/app_component_1.dart",
+        "styles": [],
+        "styleUrls": [],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
