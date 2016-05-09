@@ -6,7 +6,6 @@
       "name": "Hero",
       "moduleUrl": "asset:displaying_data/lib/hero.dart",
       "prefix": null,
-      "constConstructor": null,
       "value": null
     }
   },

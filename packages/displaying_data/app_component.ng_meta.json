@@ -13,37 +13,17 @@
     ],
     "5": [
       {
-        "1": "AppComponent",
-        "4": [
-          {
-            "1": "Component",
-            "3": [
-              {
-                "1": "selector",
-                "2": "'my-app'"
-              },
-              {
-                "1": "template",
-                "2": "'''\n<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero.name}}</h2>\n<p>Heroes:</p>\n<ul>\n  <li *ngFor=\"#hero of heroes\">\n    {{ hero.name }}\n  </li>\n</ul>\n<p *ngIf=\"heroes.length > 3\">There are many heroes!</p>\n'''"
-              }
-            ],
-            "4": false,
-            "5": true,
-            "6": true,
-            "7": true,
-            "8": false
-          }
-        ]
+        "1": "AppComponent"
       }
     ],
     "6": "app_component.dart",
-    "10": [
+    "7": [
       {
-        "1": "package:angular2/core.template.dart",
+        "1": "package:angular2/core.ngfactory.dart",
         "4": "i0"
       },
       {
-        "1": "hero.template.dart",
+        "1": "hero.ngfactory.dart",
         "4": "i1"
       }
     ]
@@ -52,7 +32,6 @@
     "AppComponent": {
       "class": "Directive",
       "isComponent": true,
-      "dynamicLoadable": true,
       "selector": "my-app",
       "exportAs": null,
       "type": {
@@ -61,7 +40,6 @@
         "moduleUrl": "asset:displaying_data/lib/app_component.dart",
         "prefix": null,
         "isHost": false,
-        "constConstructor": null,
         "value": null,
         "diDeps": []
       },
@@ -74,7 +52,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 2,
-        "template": "<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero.name}}</h2>\n<p>Heroes:</p>\n<ul>\n  <li *ngFor=\"#hero of heroes\">\n    {{ hero.name }}\n  </li>\n</ul>\n<p *ngIf=\"heroes.length > 3\">There are many heroes!</p>\n",
+        "template": "<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero.name}}</h2>\n<p>Heroes:</p>\n<ul>\n  <li *ngFor=\"let hero of heroes\">\n    {{ hero.name }}\n  </li>\n</ul>\n<p *ngIf=\"heroes.length > 3\">There are many heroes!</p>\n",
         "templateUrl": "asset:displaying_data/lib/app_component.dart",
         "styles": [],
         "styleUrls": [],

@@ -9,33 +9,13 @@
     ],
     "5": [
       {
-        "1": "AppComponent",
-        "4": [
-          {
-            "1": "Component",
-            "3": [
-              {
-                "1": "selector",
-                "2": "'my-app'"
-              },
-              {
-                "1": "template",
-                "2": "'''\n<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero}}</h2>'''"
-              }
-            ],
-            "4": false,
-            "5": true,
-            "6": true,
-            "7": true,
-            "8": false
-          }
-        ]
+        "1": "AppComponent"
       }
     ],
     "6": "app_component_1.dart",
-    "10": [
+    "7": [
       {
-        "1": "package:angular2/core.template.dart",
+        "1": "package:angular2/core.ngfactory.dart",
         "4": "i0"
       }
     ]
@@ -44,7 +24,6 @@
     "AppComponent": {
       "class": "Directive",
       "isComponent": true,
-      "dynamicLoadable": true,
       "selector": "my-app",
       "exportAs": null,
       "type": {
@@ -53,7 +32,6 @@
         "moduleUrl": "asset:displaying_data/lib/app_component_1.dart",
         "prefix": null,
         "isHost": false,
-        "constConstructor": null,
         "value": null,
         "diDeps": []
       },
