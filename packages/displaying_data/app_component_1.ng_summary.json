@@ -38,7 +38,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 2,
-        "template": "<h1>{{title}}</h1>\n<h2>My favorite hero is: {{myHero}}</h2>",
+        "template": "      <h1>{{title}}</h1>\n      <h2>My favorite hero is: {{myHero}}</h2>\n    ",
         "templateUrl": "asset:displaying_data/lib/app_component_1.dart",
         "styles": [],
         "styleUrls": [],
