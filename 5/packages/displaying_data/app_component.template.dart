@@ -34,13 +34,13 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   import2.Element _el_0;
   import2.Text _text_1;
   import2.Element _el_2;
-  import2.Text _text_3;
-  import2.Element _el_4;
-  import2.UListElement _el_6;
-  ViewContainer _appEl_7;
-  import4.NgFor _NgFor_7_7;
+  import2.Text _text_4;
+  import2.Element _el_5;
+  import2.UListElement _el_7;
   ViewContainer _appEl_8;
-  NgIf _NgIf_8_7;
+  import4.NgFor _NgFor_8_7;
+  ViewContainer _appEl_9;
+  NgIf _NgIf_9_7;
   var _expr_1;
   var _expr_2;
   static RenderComponentType _renderType;
@@ -57,22 +57,24 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     _text_1 = new import2.Text('');
     _el_0.append(_text_1);
     _el_2 = createAndAppend(doc, 'h2', parentRenderNode);
-    _text_3 = new import2.Text('');
+    import2.Text _text_3 = new import2.Text('My favorite hero is: ');
     _el_2.append(_text_3);
-    _el_4 = createAndAppend(doc, 'p', parentRenderNode);
-    import2.Text _text_5 = new import2.Text('Heroes:');
-    _el_4.append(_text_5);
-    _el_6 = createAndAppend(doc, 'ul', parentRenderNode);
-    var _anchor_7 = ngAnchor.clone(false);
-    _el_6.append(_anchor_7);
-    _appEl_7 = new ViewContainer(7, 6, this, _anchor_7);
-    TemplateRef _TemplateRef_7_6 = new TemplateRef(_appEl_7, viewFactory_AppComponent1);
-    _NgFor_7_7 = new import4.NgFor(_appEl_7, _TemplateRef_7_6);
+    _text_4 = new import2.Text('');
+    _el_2.append(_text_4);
+    _el_5 = createAndAppend(doc, 'p', parentRenderNode);
+    import2.Text _text_6 = new import2.Text('Heroes:');
+    _el_5.append(_text_6);
+    _el_7 = createAndAppend(doc, 'ul', parentRenderNode);
     var _anchor_8 = ngAnchor.clone(false);
-    parentRenderNode.append(_anchor_8);
-    _appEl_8 = new ViewContainer(8, null, this, _anchor_8);
-    TemplateRef _TemplateRef_8_6 = new TemplateRef(_appEl_8, viewFactory_AppComponent2);
-    _NgIf_8_7 = new NgIf(_appEl_8, _TemplateRef_8_6);
+    _el_7.append(_anchor_8);
+    _appEl_8 = new ViewContainer(8, 7, this, _anchor_8);
+    TemplateRef _TemplateRef_8_6 = new TemplateRef(_appEl_8, viewFactory_AppComponent1);
+    _NgFor_8_7 = new import4.NgFor(_appEl_8, _TemplateRef_8_6);
+    var _anchor_9 = ngAnchor.clone(false);
+    parentRenderNode.append(_anchor_9);
+    _appEl_9 = new ViewContainer(9, null, this, _anchor_9);
+    TemplateRef _TemplateRef_9_6 = new TemplateRef(_appEl_9, viewFactory_AppComponent2);
+    _NgIf_9_7 = new NgIf(_appEl_9, _TemplateRef_9_6);
     init(const [], null);
     return null;
   }
@@ -83,27 +85,27 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     bool firstCheck = (this.cdState == 0);
     final currVal_2 = _ctx.heroes;
     if (!identical(_expr_2, currVal_2)) {
-      _NgFor_7_7.ngForOf = currVal_2;
+      _NgFor_8_7.ngForOf = currVal_2;
       _expr_2 = currVal_2;
     }
-    _NgFor_7_7.ngDoCheck();
-    _NgIf_8_7.ngIf = (_ctx.heroes.length > 3);
-    _appEl_7.detectChangesInNestedViews();
+    _NgFor_8_7.ngDoCheck();
+    _NgIf_9_7.ngIf = (_ctx.heroes.length > 3);
     _appEl_8.detectChangesInNestedViews();
+    _appEl_9.detectChangesInNestedViews();
     if (firstCheck) {
       (_text_1.text = (_ctx.title ?? ''));
     }
-    final currVal_1 = import9.interpolate1('My favorite hero is: ', _ctx.myHero.name, '');
+    final currVal_1 = import9.interpolate0(_ctx.myHero.name);
     if (!identical(_expr_1, currVal_1)) {
-      _text_3.text = currVal_1;
+      _text_4.text = currVal_1;
       _expr_1 = currVal_1;
     }
   }
 
   @override
   void destroyInternal() {
-    _appEl_7?.destroyNestedViews();
     _appEl_8?.destroyNestedViews();
+    _appEl_9?.destroyNestedViews();
   }
 }
 
