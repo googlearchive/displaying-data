@@ -1,7 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
 // **************************************************************************
-// Generator: TemplateGenerator
+// Generator: Instance of 'Compiler'
 // **************************************************************************
 
 // ignore_for_file: cancel_subscriptions,constant_identifier_names,duplicate_import,non_constant_identifier_names,library_prefixes,UNUSED_IMPORT,UNUSED_SHOWN_NAME
@@ -36,9 +34,9 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   import2.Element _el_5;
   import2.UListElement _el_7;
   ViewContainer _appEl_8;
-  import4.NgFor _NgFor_8_7;
+  import4.NgFor _NgFor_8_9;
   ViewContainer _appEl_9;
-  NgIf _NgIf_9_7;
+  NgIf _NgIf_9_9;
   var _expr_1;
   var _expr_2;
   static RenderComponentType _renderType;
@@ -66,13 +64,13 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     var _anchor_8 = ngAnchor.clone(false);
     _el_7.append(_anchor_8);
     _appEl_8 = new ViewContainer(8, 7, this, _anchor_8);
-    TemplateRef _TemplateRef_8_6 = new TemplateRef(_appEl_8, viewFactory_AppComponent1);
-    _NgFor_8_7 = new import4.NgFor(_appEl_8, _TemplateRef_8_6);
+    TemplateRef _TemplateRef_8_8 = new TemplateRef(_appEl_8, viewFactory_AppComponent1);
+    _NgFor_8_9 = new import4.NgFor(_appEl_8, _TemplateRef_8_8);
     var _anchor_9 = ngAnchor.clone(false);
     parentRenderNode.append(_anchor_9);
     _appEl_9 = new ViewContainer(9, null, this, _anchor_9);
-    TemplateRef _TemplateRef_9_6 = new TemplateRef(_appEl_9, viewFactory_AppComponent2);
-    _NgIf_9_7 = new NgIf(_appEl_9, _TemplateRef_9_6);
+    TemplateRef _TemplateRef_9_8 = new TemplateRef(_appEl_9, viewFactory_AppComponent2);
+    _NgIf_9_9 = new NgIf(_appEl_9, _TemplateRef_9_8);
     init(const [], null);
     return null;
   }
@@ -83,11 +81,11 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     bool firstCheck = (this.cdState == 0);
     final currVal_2 = _ctx.heroes;
     if (!identical(_expr_2, currVal_2)) {
-      _NgFor_8_7.ngForOf = currVal_2;
+      _NgFor_8_9.ngForOf = currVal_2;
       _expr_2 = currVal_2;
     }
-    _NgFor_8_7.ngDoCheck();
-    _NgIf_9_7.ngIf = (_ctx.heroes.length > 3);
+    _NgFor_8_9.ngDoCheck();
+    _NgIf_9_9.ngIf = (_ctx.heroes.length > 3);
     _appEl_8.detectChangesInNestedViews();
     _appEl_9.detectChangesInNestedViews();
     if (firstCheck) {
@@ -167,24 +165,16 @@ const List<dynamic> styles$AppComponentHost = const [];
 
 class _ViewAppComponentHost0 extends AppView<dynamic> {
   ViewAppComponent0 _compView_0;
-  import1.AppComponent _AppComponent_0_4;
+  import1.AppComponent _AppComponent_0_5;
   _ViewAppComponentHost0(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewAppComponent0(this, 0);
     rootEl = _compView_0.rootEl;
-    _AppComponent_0_4 = new import1.AppComponent();
-    _compView_0.create(_AppComponent_0_4, projectableNodes);
+    _AppComponent_0_5 = new import1.AppComponent();
+    _compView_0.create(_AppComponent_0_5, projectableNodes);
     init0(rootEl);
-    return new ComponentRef<import1.AppComponent>(0, this, rootEl, _AppComponent_0_4);
-  }
-
-  @override
-  dynamic injectorGetInternal(dynamic token, int nodeIndex, dynamic notFoundResult) {
-    if ((identical(token, import1.AppComponent) && (0 == nodeIndex))) {
-      return _AppComponent_0_4;
-    }
-    return notFoundResult;
+    return new ComponentRef<import1.AppComponent>(0, this, rootEl, _AppComponent_0_5);
   }
 
   @override
