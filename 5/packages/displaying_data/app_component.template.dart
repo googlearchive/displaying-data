@@ -15,14 +15,13 @@ import 'app_component.dart' as import1;
 import 'dart:html' as import2;
 import 'package:angular/src/core/linker/view_container.dart';
 import 'package:angular/src/common/directives/ng_for.dart' as import4;
-import 'package:angular/src/common/directives/ng_if.dart';
 import 'package:angular/src/core/render/api.dart';
-import 'package:angular/src/core/linker/view_type.dart' as import7;
+import 'package:angular/src/core/linker/view_type.dart' as import6;
 import 'package:angular/src/core/change_detection/change_detection.dart';
-import 'package:angular/src/core/linker/app_view_utils.dart' as import9;
+import 'package:angular/src/core/linker/app_view_utils.dart' as import8;
 import 'package:angular/angular.dart';
 import 'package:angular/src/core/linker/template_ref.dart';
-import 'src/hero.dart' as import12;
+import 'src/hero.dart' as import11;
 
 const List<dynamic> styles$AppComponent = const [];
 
@@ -35,22 +34,25 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   import2.UListElement _el_7;
   ViewContainer _appEl_8;
   import4.NgFor _NgFor_8_9;
-  ViewContainer _appEl_9;
-  NgIf _NgIf_9_9;
+  import2.Comment _anchor_9;
+  import2.Element _el_9_0;
+  import2.Text _text_9_1;
+  var _expr_0;
   var _expr_1;
-  var _expr_2;
+  bool _expr_2 = false;
   static RenderComponentType _renderType;
-  ViewAppComponent0(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewAppComponent0(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import2.document.createElement('my-app');
-    _renderType ??= import9.appViewUtils.createRenderType('', ViewEncapsulation.None, styles$AppComponent);
+    _renderType ??= import8.appViewUtils.createRenderType('', ViewEncapsulation.None, styles$AppComponent);
     setupComponentType(_renderType);
   }
   @override
   ComponentRef<import1.AppComponent> build() {
-    final import2.HtmlElement parentRenderNode = initViewRoot(rootEl);
+    final _rootEl = rootEl;
+    final import2.HtmlElement parentRenderNode = initViewRoot(_rootEl);
     var doc = import2.document;
     _el_0 = createAndAppend(doc, 'h1', parentRenderNode);
-    _text_1 = new import2.Text('');
+    _text_1 = new import2.Text((ctx.title ?? ''));
     _el_0.append(_text_1);
     _el_2 = createAndAppend(doc, 'h2', parentRenderNode);
     import2.Text _text_3 = new import2.Text('My favorite hero is: ');
@@ -66,46 +68,49 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     _appEl_8 = new ViewContainer(8, 7, this, _anchor_8);
     TemplateRef _TemplateRef_8_8 = new TemplateRef(_appEl_8, viewFactory_AppComponent1);
     _NgFor_8_9 = new import4.NgFor(_appEl_8, _TemplateRef_8_8);
-    var _anchor_9 = ngAnchor.clone(false);
+    _anchor_9 = ngAnchor.clone(false);
     parentRenderNode.append(_anchor_9);
-    _appEl_9 = new ViewContainer(9, null, this, _anchor_9);
-    TemplateRef _TemplateRef_9_8 = new TemplateRef(_appEl_9, viewFactory_AppComponent2);
-    _NgIf_9_9 = new NgIf(_appEl_9, _TemplateRef_9_8);
-    init(const [], null);
+    init([], null);
     return null;
   }
 
   @override
   void detectChangesInternal() {
     final import1.AppComponent _ctx = ctx;
-    bool firstCheck = (this.cdState == 0);
-    final currVal_2 = _ctx.heroes;
-    if (!identical(_expr_2, currVal_2)) {
-      _NgFor_8_9.ngForOf = currVal_2;
-      _expr_2 = currVal_2;
+    final currVal_1 = _ctx.heroes;
+    if (!identical(_expr_1, currVal_1)) {
+      _NgFor_8_9.ngForOf = currVal_1;
+      _expr_1 = currVal_1;
     }
     _NgFor_8_9.ngDoCheck();
-    _NgIf_9_9.ngIf = (_ctx.heroes.length > 3);
-    _appEl_8.detectChangesInNestedViews();
-    _appEl_9.detectChangesInNestedViews();
-    if (firstCheck) {
-      (_text_1.text = (_ctx.title ?? ''));
+    final currVal_2 = ((_ctx.heroes.length > 3) == true);
+    if (!identical(_expr_2, currVal_2)) {
+      if (currVal_2) {
+        var doc = import2.document;
+        _el_9_0 = doc.createElement('p');
+        _text_9_1 = new import2.Text('There are many heroes!');
+        _el_9_0.append(_text_9_1);
+        addInlinedNodes(_anchor_9, [_el_9_0], true);
+      } else {
+        removeInlinedNodes([_el_9_0], true);
+      }
+      _expr_2 = currVal_2;
     }
-    final currVal_1 = import9.interpolate0(_ctx.myHero.name);
-    if (!identical(_expr_1, currVal_1)) {
-      _text_4.text = currVal_1;
-      _expr_1 = currVal_1;
+    _appEl_8.detectChangesInNestedViews();
+    final currVal_0 = import8.interpolate0(_ctx.myHero.name);
+    if (!identical(_expr_0, currVal_0)) {
+      _text_4.text = currVal_0;
+      _expr_0 = currVal_0;
     }
   }
 
   @override
   void destroyInternal() {
     _appEl_8?.destroyNestedViews();
-    _appEl_9?.destroyNestedViews();
   }
 }
 
-AppView<import1.AppComponent> viewFactory_AppComponent0(AppView<dynamic> parentView, num parentIndex) {
+AppView<import1.AppComponent> viewFactory_AppComponent0(AppView<dynamic> parentView, int parentIndex) {
   return new ViewAppComponent0(parentView, parentIndex);
 }
 
@@ -113,7 +118,7 @@ class _ViewAppComponent1 extends AppView<import1.AppComponent> {
   import2.Element _el_0;
   import2.Text _text_1;
   var _expr_0;
-  _ViewAppComponent1(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.EMBEDDED, {'\$implicit': null}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  _ViewAppComponent1(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.EMBEDDED, {'\$implicit': null}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     componentType = ViewAppComponent0._renderType;
   }
   @override
@@ -128,8 +133,8 @@ class _ViewAppComponent1 extends AppView<import1.AppComponent> {
 
   @override
   void detectChangesInternal() {
-    final import12.Hero local_hero = locals['\$implicit'];
-    final currVal_0 = import9.interpolate0(local_hero.name);
+    final import11.Hero local_hero = locals['\$implicit'];
+    final currVal_0 = import8.interpolate0(local_hero.name);
     if (!identical(_expr_0, currVal_0)) {
       _text_1.text = currVal_0;
       _expr_0 = currVal_0;
@@ -137,28 +142,8 @@ class _ViewAppComponent1 extends AppView<import1.AppComponent> {
   }
 }
 
-AppView<import1.AppComponent> viewFactory_AppComponent1(AppView<dynamic> parentView, num parentIndex) {
+AppView<import1.AppComponent> viewFactory_AppComponent1(AppView<dynamic> parentView, int parentIndex) {
   return new _ViewAppComponent1(parentView, parentIndex);
-}
-
-class _ViewAppComponent2 extends AppView<import1.AppComponent> {
-  import2.Element _el_0;
-  _ViewAppComponent2(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.EMBEDDED, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
-    componentType = ViewAppComponent0._renderType;
-  }
-  @override
-  ComponentRef<import1.AppComponent> build() {
-    var doc = import2.document;
-    _el_0 = doc.createElement('p');
-    import2.Text _text_1 = new import2.Text('There are many heroes!');
-    _el_0.append(_text_1);
-    init0(_el_0);
-    return null;
-  }
-}
-
-AppView<import1.AppComponent> viewFactory_AppComponent2(AppView<dynamic> parentView, num parentIndex) {
-  return new _ViewAppComponent2(parentView, parentIndex);
 }
 
 const List<dynamic> styles$AppComponentHost = const [];
@@ -166,7 +151,7 @@ const List<dynamic> styles$AppComponentHost = const [];
 class _ViewAppComponentHost0 extends AppView<dynamic> {
   ViewAppComponent0 _compView_0;
   import1.AppComponent _AppComponent_0_5;
-  _ViewAppComponentHost0(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewAppComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import6.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewAppComponent0(this, 0);
@@ -188,7 +173,7 @@ class _ViewAppComponentHost0 extends AppView<dynamic> {
   }
 }
 
-AppView viewFactory_AppComponentHost0(AppView<dynamic> parentView, num parentIndex) {
+AppView viewFactory_AppComponentHost0(AppView<dynamic> parentView, int parentIndex) {
   return new _ViewAppComponentHost0(parentView, parentIndex);
 }
 
